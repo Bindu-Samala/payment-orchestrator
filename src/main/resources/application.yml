@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: payment-orchestrator
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payment_system
+    username: root
+    password: password123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+# Redisson Single-Node Config
+redisson:
+  single-server-config:
+    address: "redis://127.0.0.1:6379"
